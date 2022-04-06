@@ -9,20 +9,61 @@
 </head>
 
 <body>
-  <div class="service__container">
-    <header class="service__header header">
-      <div class="burger"></div>
+  <div class="container">
+    <header class="header">
+      <input type="checkbox" id="burger">
+      <label for="burger">☰</label>
+      <!-- <div class="burger"></div> -->
       <a href="" class="logo-link">
-        <img src="#" alt="" class="logo-img">
+        <img src="assets/img/logo.svg" alt="" class="logo-img">
       </a>
-      <div class="service__contacts contacts">
-        <a href="" class="contacts__call"></a>
-        <a href="" class="contacts__message"></a>
-        <a href="" class="contacts__profile"></a>
+      <div class="header__contacts contacts">
+        <div class="contacts__call icon">
+          <a href="" ></a>
+        </div>
+        <div class="contacts__chat icon">
+          <a href=""></a>
+        </div>
+        <div class="contacts__profile icon">
+          <a href=""></a>
+        </div>
       </div>
-      <div class="settings"></div>
-      <div class="header__search"></div>
+      <div class="repair icon"></div>
+      <div class="checkstatus icon"></div>
     </header>
+
+    <aside class="burger__menu">
+       
+      <nav class="burger__nav">
+        <header class="burger__menu-header">
+          <a href="" class="logo-link">
+            <img src="assets/img/logo.svg" alt="" class="logo-img">
+          </a>
+          <div class="burger__search icon"></div>
+        </header>
+        <ul class="burger__list">
+          <li class="burger__list-item">Ремонт техники</li>
+          <li class="burger__list-item">Услуги и сервисы</li>
+          <li class="burger__list-item">Корпоративным клиентам</li>
+          <li class="burger__list-item">Продавцам техники</li>
+          <li class="burger__list-item">Партнерам</li>
+          <li class="burger__list-item">Производителям</li>
+          <li class="burger__list-item">Наши сервисные центры</li>
+          <li class="burger__list-item">Контакты</li>
+        </ul>
+      </nav>
+      <div class="burger__contacts">
+        <div class="contacts__call icon"></div>
+        <div class="contacts__chat icon"></div>
+        <div class="contacts__profile icon"></div>
+      </div>
+      <div class="email">mail@cps.com</div>
+      <div class="tel">8 800 890 8900</div>
+      <div class="language">
+        <span class="ru">ru</span>
+        <span class="en">en</span>
+        <span class="ch">ch</span></div>
+    </aside>
 
     <main class="main">
       <h1 class="service__title"></h1>
@@ -52,7 +93,7 @@
       </section>
 
       <section class="price">
-        <div class="title-wrapper">
+        <div class="title-wrapper price__title">
           <h2 class="price__title">ЦЕНЫ НА УСЛУГИ</h2>
         </div>
         <div class="price__slider"></div>
@@ -67,31 +108,41 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+              <button class="price__order">заказать</button>
+            </td>
           </tr>
           <tr class="table__row">
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+              <button class="price__order">заказать</button>
+            </td>
           </tr>
           <tr class="table__row">
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+              <button class="price__order">заказать</button>
+            </td>
           </tr>
           <tr class="table__row">
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+              <button class="price__order">заказать</button>
+            </td>
           </tr>
           <tr class="table__row">
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+              <button class="price__order">заказать</button>
+            </td>
           </tr>
         </table>
         <p class="price__description"></p>

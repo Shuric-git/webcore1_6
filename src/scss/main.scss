@@ -3,8 +3,154 @@
 @import "vendor";
 @import "vars";
 @import "settings";
+@import "price";
 
 body {
     font-family: TTLakesCondensed-Regular;
     font-weight: 100;
 }
+.container { 
+    color: blue;
+}
+
+.header { 
+    display: flex;
+    &__contacts { }
+
+    &__header { }
+}
+
+.logo-img { }
+
+.logo-link { }
+
+.icon {
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+}
+
+#burger, [for=burger] {
+    display: none;
+}
+
+@media (max-width: 320px) {
+    [for=burger] {
+        display: block;
+    }
+}
+
+.contacts {
+    position: relative;
+    @media (max-width: 320px) {
+        display: none;
+    }
+	&__call { 
+        background-image: url(../assets/img/call.svg);
+    }
+	&__chat { 
+        background-image: url(../assets/img/chat.svg);
+    }
+	&__profile { 
+        background-image: url(../assets/img/profile.svg);
+    }
+}
+
+.burger__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px 16px 32px;
+    background-color: #fff;
+}
+
+.burger {
+    &__menu-header {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__nav {
+
+    }
+    &__search {
+        background-image: url(../assets/img/search.svg);
+    }
+    &__list-item {
+        line-height: 24px;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+    }
+}
+
+.burger__contacts {
+    @media (max-width: 320px) {
+        display: flex;
+    }
+    .contacts {
+
+        &__call { 
+            background-image: url(../assets/img/call.svg);
+        }
+        &__chat { 
+            background-image: url(../assets/img/chat.svg);
+        }
+        &__profile { 
+            background-image: url(../assets/img/profile.svg);
+        }
+    }
+}
+
+.repair {
+
+}
+
+.checkstatus { 
+    
+}
+
+
+// .service { }
+// &__title { }
+// .sevice { }
+// &__nav { }
+// .service { }
+// &__list { }
+// .service { }
+// &__list-item { }
+// .service { }
+// &__item-link { }
+// .table { }
+// &__row { }
+
+// .burger { }
+
+
+
+// .settings { }
+// .main { }
+// .about {
+// 	&__description { }
+// 	&__spoiler { }
+// 	&__img { }
+// }
+// .repair {
+// 	&__title-brand { }
+// 	&__slider-brand { }
+// 	&__title-technic { }
+// 	&__slider-technic { }
+// }
+// .title-wrapper { }
+// .price {
+// 	&__title { }
+// 	&__slider { }
+// 	&__table { }
+// 	&__order { }
+// 	&__description { }
+// 	&__offer { }
+// }
+// .footer { }
+// .copyright { }
+// .conf { }
+// .description { }

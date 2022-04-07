@@ -12,11 +12,50 @@
   <div class="container">
     <header class="header">
       <input type="checkbox" id="burger">
-      <label for="burger">☰</label>
-      <!-- <div class="burger"></div> -->
-      <a href="" class="logo-link">
-        <img src="assets/img/logo.svg" alt="" class="logo-img">
-      </a>
+      <label for="burger"  class="icon"><span class="line"></span></label>
+      <aside class="burger__menu">
+       
+        <header class="burger__menu-header">
+          <div class="burger__logo logo">
+            <a href="" class="logo-link">
+              <img src="assets/img/logo.svg" alt="" class="logo-img">
+            </a>
+          </div>
+          <div class="burger__search icon"></div>
+        </header>
+        <nav class="burger__nav">
+          <ul class="burger__list">
+            <li class="burger__list-item">Ремонт техники</li>
+            <li class="burger__list-item">Услуги и сервисы</li>
+            <li class="burger__list-item">Корпоративным клиентам</li>
+            <li class="burger__list-item">Продавцам техники</li>
+            <li class="burger__list-item">Партнерам</li>
+            <li class="burger__list-item">Производителям</li>
+            <li class="burger__list-item">Наши сервисные центры</li>
+            <li class="burger__list-item">Контакты</li>
+          </ul>
+        </nav>
+        <div class="burger__contacts">
+          <div class="contacts__call icon"></div>
+          <div class="contacts__chat icon"></div>
+          <div class="contacts__profile icon"></div>
+        </div>
+        <footer class="burger__footer">
+          <div class="email">mail@cps.com</div>
+          <div class="tel">8 800 890 8900</div>
+          <div class="language">
+            <span class="ru">RU</span>
+            <span class="en">EN</span>
+            <span class="ch">CH</span>
+          </div>
+        </footer>
+      </aside>
+
+      <div class="logo logo-mobile">
+        <a href="" class="logo-link">
+          <img src="assets/img/logo.svg" alt="" class="logo-img">
+        </a>
+      </div>
       <div class="header__contacts contacts">
         <div class="contacts__call icon">
           <a href="" ></a>
@@ -28,42 +67,11 @@
           <a href=""></a>
         </div>
       </div>
-      <div class="repair icon"></div>
+      <div class="repair-icon icon"></div>
       <div class="checkstatus icon"></div>
     </header>
 
-    <aside class="burger__menu">
-       
-      <nav class="burger__nav">
-        <header class="burger__menu-header">
-          <a href="" class="logo-link">
-            <img src="assets/img/logo.svg" alt="" class="logo-img">
-          </a>
-          <div class="burger__search icon"></div>
-        </header>
-        <ul class="burger__list">
-          <li class="burger__list-item">Ремонт техники</li>
-          <li class="burger__list-item">Услуги и сервисы</li>
-          <li class="burger__list-item">Корпоративным клиентам</li>
-          <li class="burger__list-item">Продавцам техники</li>
-          <li class="burger__list-item">Партнерам</li>
-          <li class="burger__list-item">Производителям</li>
-          <li class="burger__list-item">Наши сервисные центры</li>
-          <li class="burger__list-item">Контакты</li>
-        </ul>
-      </nav>
-      <div class="burger__contacts">
-        <div class="contacts__call icon"></div>
-        <div class="contacts__chat icon"></div>
-        <div class="contacts__profile icon"></div>
-      </div>
-      <div class="email">mail@cps.com</div>
-      <div class="tel">8 800 890 8900</div>
-      <div class="language">
-        <span class="ru">ru</span>
-        <span class="en">en</span>
-        <span class="ch">ch</span></div>
-    </aside>
+
 
     <main class="main">
       <h1 class="service__title"></h1>

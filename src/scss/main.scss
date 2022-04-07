@@ -6,11 +6,13 @@
 @import "price";
 
 body {
-    font-family: TTLakesCondensed-Regular;
+    font-family: TTLakes;
     font-weight: 100;
 }
 .container { 
-    color: blue;
+    @media (max-width: 320px) {
+        padding: 16px;
+    }
 }
 
 .header { 
@@ -18,6 +20,11 @@ body {
     &__contacts { }
 
     &__header { }
+}
+
+.logo {
+    width: 97px;
+    height: 51px;
 }
 
 .logo-img { }
@@ -35,9 +42,144 @@ body {
     display: none;
 }
 
+[for=burger] {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+    background-color: $cherry;
+    &::before {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid $white;
+        top: 12px;
+        left: 11px;
+        width: 18px;
+        transition: all .3s ease-in-out;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid $white;
+        top: 19px;
+        left: 11px;
+        width: 10px;
+        transition: all .3s ease-in-out;
+    }
+    .line::after {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid $white;
+        bottom: 12px;
+        left: 11px;
+        width: 14px;
+        transition: all .3s ease-in-out;
+    }
+}
+
+#burger:checked + label + aside {
+    top: 0%;
+    transition: all .3s ease-in-out;
+}
+
+#burger:checked + [for=burger]{
+    &::before {
+        transition: all .3s ease-in-out;
+        top: 19px;
+        left: 9px;
+        width: 22px;
+        transform: rotate(45deg);
+    }
+    &::after {
+        transition: all .3s ease-in-out;
+        width: 22px;
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+    .line::after {
+        border-bottom: 2px solid $cherry;
+    }
+}
+
+.burger__menu {
+    top: -250%;
+    position: absolute;
+    left: 0;
+    padding: 16px 16px 32px;
+    background-color: #fff;
+    text-decoration: none;
+    list-style: none;
+    transition: all .3s ease-in-out;
+}
+
+.burger {
+    &__menu-header {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__logo {
+        margin-bottom: 25px;
+        margin-left: 56px;
+        margin-right: 70px;
+    }
+    &__search {
+        background-image: url(../assets/img/search.svg);
+        margin-right: 16px;
+    }
+    &__nav {    }
+    &__list-item {
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+        margin-bottom: 24px;
+    }
+    &__footer {
+        color: #1B1C21;
+    }
+}
+
+.email {
+    margin-bottom: 12px;
+}
+
+.tel {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.burger__contacts {
+    @media (max-width: 320px) {
+        display: flex;
+        margin-bottom: 8px;
+    }
+    .contacts {
+        &__call { 
+            background-image: url(../assets/img/call.svg);
+            margin-left: 0px;
+        }
+        &__chat { 
+            background-image: url(../assets/img/chat.svg);
+        }
+        &__profile { 
+            background-image: url(../assets/img/profile.svg);
+        }
+    }
+}
+
+
+
 @media (max-width: 320px) {
     [for=burger] {
         display: block;
+        z-index: 100;
     }
 }
 
@@ -57,57 +199,26 @@ body {
     }
 }
 
-.burger__menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 24px 16px 32px;
-    background-color: #fff;
+.logo-mobile {
+    margin-right: 17px;
 }
 
-.burger {
-    &__menu-header {
-        display: flex;
-        justify-content: flex-end;
+.repair-icon {
+    background-image: url(../assets/img/repair.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+        content: '';
+        border-right: 2px solid #ad0a0a;
+        height: 32px;
+        position: absolute;
+        top: 4px;
+        left: -20px;
     }
-    &__nav {
-
-    }
-    &__search {
-        background-image: url(../assets/img/search.svg);
-    }
-    &__list-item {
-        line-height: 24px;
-        font-size: 16px;
-        letter-spacing: 0.2px;
-        color: #1B1C21;
-    }
-}
-
-.burger__contacts {
-    @media (max-width: 320px) {
-        display: flex;
-    }
-    .contacts {
-
-        &__call { 
-            background-image: url(../assets/img/call.svg);
-        }
-        &__chat { 
-            background-image: url(../assets/img/chat.svg);
-        }
-        &__profile { 
-            background-image: url(../assets/img/profile.svg);
-        }
-    }
-}
-
-.repair {
-
 }
 
 .checkstatus { 
-    
+    background-image: url(../assets/img/checkstatus.svg);
 }
 
 

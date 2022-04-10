@@ -12,30 +12,30 @@ html {
 //   outline: 2px solid transparent;
 // }
 
-// body {
+body {
 //   overflow-anchor: none;
 //   margin: 0;
-//   font-family: 'Barlow', sans-serif;
+  font-family: TTLakes, sans-serif;
 //   color: $main-text-color;
 //   background-color: $background;
 //   scroll-behavior: smooth;
-// }
+}
 
-// a {
-//   text-decoration: none;
-//   color: inherit;
-// }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-// h1, h2, h3, h4, h5, h6, p {
-//   margin: 0;
-//   padding: 0;
-// }
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
 
-// img {
-//   height: auto;
-//   max-width: 100%;
-//   object-fit: cover;
-// }
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
 
 ul {
   margin: 0;

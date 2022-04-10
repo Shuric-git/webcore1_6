@@ -1,11 +1,36 @@
 .price {
-    display: none;
-    &__title { 
-    
-    }
-	&__title { }
-	&__slider { }
-	&__table { }
+	&>.swiper>.swiper-wrapper>.swiper-slide{  
+		display: grid;
+		grid-row-gap: 16px;
+		grid-template-columns: 2fr;
+		border: 0px solid white;
+		.service-name {
+			grid-column: 1/3;
+		}
+		.service-price {
+			grid-column: 1/2;
+		}
+		.service-period {
+			grid-column: 1/1;
+		}
+		.price__order {
+			grid-column: 2/2;
+			background-color: $cherry;
+			color: #fff;
+			border: none;
+			border-radius: 25px;
+			font-family: TTLakesDemiBold;
+			font-size: 12px;
+			letter-spacing: 0.2px;
+			text-transform: uppercase;
+			padding: 4px 12px;
+		}
+	}
+	&__table { 
+		@media (max-width: 320px) {
+			display: none;
+		}
+	}
 	&__order { }
 	&__description { }
 	&__offer { }

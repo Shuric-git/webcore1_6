@@ -13,8 +13,8 @@
     <header class="header">
       <input type="checkbox" id="burger">
       <label for="burger"  class="icon"><span class="line"></span></label>
+
       <aside class="burger__menu">
-       
         <header class="burger__menu-header">
           <div class="burger__logo logo">
             <a href="" class="logo-link">
@@ -71,39 +71,171 @@
       <div class="checkstatus icon"></div>
     </header>
 
-
-
     <main class="main">
-      <h1 class="service__title"></h1>
-      <nav class="sevice__nav">
-        <ul class="service__list">
-          <li class="service__list-item"><a href="" class="service__item-link"></a></li>
-          <li class="service__list-item"><a href="" class="service__item-link"></a></li>
-          <li class="service__list-item"><a href="" class="service__item-link"></a></li>
-          <li class="service__list-item"><a href="" class="service__item-link"></a></li>
-          <li class="service__list-item"><a href="" class="service__item-link"></a></li>
-        </ul>
-      </nav>
+      <section class="service__top">
+        <h1 class="service__title">Услуги и сервисы</h1>
+        <nav class="sevice__nav">
+          <ul class="service__list">
+            <li class="service__list-item service__list-item__active"><a href="" class="service__item-link">Ремонтируемые устройства</a></li>
+            <li class="service__list-item"><a href="" class="service__item-link">Дополнительные услуги</a></li>
+            <li class="service__list-item"><a href="" class="service__item-link">Цены на услуги</a></li>
+            <li class="service__list-item"><a href="" class="service__item-link">Адреса сервисных центров</a></li>
+            <li class="service__list-item"><a href="" class="service__item-link">Специальные цены</a></li>
+          </ul>
+        </nav>
+      </section>
       <section class="about">
-        <p class="about__description"></p>
-        <div class="about__spoiler"></div>
-        <div class="about__img"></div>
+        <div class="spoiler-wrapper">
+          <input type="checkbox" id="spoiler-checker">
+          <label for="spoiler-checker" class="about__spoiler">Читать далее</label>
+          <p class="about__description">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br>
+
+          Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
+        </div>
+        <img class="about__img" src="assets/img/cps.png">
       </section>
       <section class="repair">
-        <div class="title-wrapper">
-          <h2 class="repair__title-brand"></h2>
+        <div class="title-wrapper block-title">
+          <p class="repair__title-brand gradient-title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
         </div>
-        <div class="repair__slider-brand"></div>
-        <div class="title-wrapper">
-          <h2 class="repair__title-technic"></h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/logo/Bitmap.png" alt="">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="repair__slider-technic"></div>
+
+        <div class="title-wrapper block-title">
+          <p class="repair__title-technic gradient-title">Ремонт различных видов техники</p>
+        </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide technic-slide">
+                      <p>Ремонт ноутбуков</p>
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                    <div class="swiper-slide technic-slide">
+                      
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
       </section>
 
       <section class="price">
         <div class="title-wrapper price__title">
-          <h2 class="price__title">ЦЕНЫ НА УСЛУГИ</h2>
+          <p class="price__title gradient-title">ЦЕНЫ НА УСЛУГИ</p>
         </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="service-name">
+                <p>Ремонтные услуги</p>
+                <p>Тестирование с выдачей технического заключения</p>
+              </div>
+              <div class="service-price">
+                <p>Цена</p>
+                <p>Бесплатно</p>
+              </div>
+              <div class="service-period">
+                <p>Срок</p>
+                <p>30-120 мин</p>
+              </div>
+              <button class="price__order">заказать</button>
+            </div>
+            <div class="swiper-slide">
+              
+              <button class="price__order">заказать</button>
+            </div>
+            <div class="swiper-slide">
+              
+              <button class="price__order">заказать</button>
+            </div>
+            <div class="swiper-slide">
+              
+              <button class="price__order">заказать</button>
+            </div>
+            <div class="swiper-slide">
+              
+              <button class="price__order">заказать</button>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
         <div class="price__slider"></div>
         <table class="price__table">
           <tr class="table__row">

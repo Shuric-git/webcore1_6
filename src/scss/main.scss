@@ -6,20 +6,23 @@
 @import "price";
 
 body {
-    font-family: TTLakes;
     font-weight: 100;
+    background-color: $soft-gray;
 }
 .container { 
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 24px;
     @media (max-width: 320px) {
-        padding: 16px;
     }
 }
 
 .header { 
     display: flex;
+    padding: 17px 16px;
+    background-color: $white;
+    border-bottom: solid 1px $turquoise;
     &__contacts { }
-
-    &__header { }
 }
 
 .logo {
@@ -31,11 +34,46 @@ body {
 
 .logo-link { }
 
+.circle {
+    
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $cherry;
+    border-radius: 25px;
+    &::before {
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 8px;
+        height: 8px;
+        bottom: 15px;
+        left: 14px;
+        border-right: 2px solid $cherry;
+        border-bottom: 2px solid $cherry;
+    }
+}
+
 .icon {
     background-size: contain;
     width: 40px;
     height: 40px;
     margin: 8px;
+}
+
+.block-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+
+.gradient-title {
+    padding: 16px;
+    border-top: solid 1px $turquoise;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    color: $menu-text-color;
+    text-transform: uppercase;
 }
 
 #burger, [for=burger] {
@@ -49,7 +87,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 25px;
-    transition: all .3s ease-in-out;
+    transition: $transition;
     background-color: $cherry;
     &::before {
         content: '';
@@ -58,7 +96,7 @@ body {
         top: 12px;
         left: 11px;
         width: 18px;
-        transition: all .3s ease-in-out;
+        transition: $transition;
     }
     &::after {
         content: '';
@@ -67,7 +105,7 @@ body {
         top: 19px;
         left: 11px;
         width: 10px;
-        transition: all .3s ease-in-out;
+        transition: $transition;
     }
     .line::after {
         content: '';
@@ -76,25 +114,25 @@ body {
         bottom: 12px;
         left: 11px;
         width: 14px;
-        transition: all .3s ease-in-out;
+        transition: $transition;
     }
 }
 
 #burger:checked + label + aside {
     top: 0%;
-    transition: all .3s ease-in-out;
+    transition: $transition;
 }
 
 #burger:checked + [for=burger]{
     &::before {
-        transition: all .3s ease-in-out;
+        transition: $transition;
         top: 19px;
         left: 9px;
         width: 22px;
         transform: rotate(45deg);
     }
     &::after {
-        transition: all .3s ease-in-out;
+        transition: $transition;
         width: 22px;
         left: 9px;
         transform: rotate(-45deg);
@@ -106,13 +144,14 @@ body {
 
 .burger__menu {
     top: -250%;
+    z-index: 50;
     position: absolute;
     left: 0;
     padding: 16px 16px 32px;
-    background-color: #fff;
+    background-color: $white;
     text-decoration: none;
     list-style: none;
-    transition: all .3s ease-in-out;
+    transition: $transition;
 }
 
 .burger {
@@ -174,8 +213,6 @@ body {
     }
 }
 
-
-
 @media (max-width: 320px) {
     [for=burger] {
         display: block;
@@ -200,7 +237,7 @@ body {
 }
 
 .logo-mobile {
-    margin-right: 17px;
+    margin-right: 31px;
 }
 
 .repair-icon {
@@ -209,7 +246,8 @@ body {
     position: relative;
     &::before {
         content: '';
-        border-right: 2px solid #ad0a0a;
+        border-right: 2px solid $light-gray;
+        border-radius: 5px;
         height: 32px;
         position: absolute;
         top: 4px;
@@ -219,44 +257,188 @@ body {
 
 .checkstatus { 
     background-image: url(../assets/img/checkstatus.svg);
+    margin-right: 0;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 16px;
+}
 
-// .service { }
-// &__title { }
-// .sevice { }
-// &__nav { }
-// .service { }
-// &__list { }
-// .service { }
-// &__list-item { }
-// .service { }
-// &__item-link { }
-// .table { }
-// &__row { }
+.service { 
+    background-color: #F8F8F8;
+    &__top {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 16px;
+        padding: 0 16px;
+    }
 
-// .burger { }
+    &__title { 
+        font-family: TTLakesBold;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+    }
+    &__nav { 
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    &__list { 
+        display: flex;
+        overflow-x: scroll;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__list-item { 
+        padding: 8px 8px 8px 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        border: 2px solid $soft-gray;
+        border-radius: 6px;
+        &:active {
+            background-color: $white;
+            border: 2px solid $turquoise-strong;
+            border-radius: 6px;
+        }
+        &__active {
+            background-color: $white;
+            border: 2px solid $turquoise-strong;
+            border-radius: 6px;
 
+        }
 
+    }
+    &__item-link { 
+    }
 
-// .settings { }
-// .main { }
-// .about {
-// 	&__description { }
-// 	&__spoiler { }
-// 	&__img { }
-// }
-// .repair {
-// 	&__title-brand { }
-// 	&__slider-brand { }
-// 	&__title-technic { }
-// 	&__slider-technic { }
-// }
+}
+
+.about {
+    display: grid;
+    grid-row-gap: 16px;
+	&__description { 
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        overflow: hidden;
+        max-height: 90px;
+        margin-bottom: 16px;
+        padding: 0 16px;
+    }
+    #spoiler-checker {
+        display: none;
+    }
+    .spoiler-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    &__spoiler {
+        margin-left: 32px;
+        &::before {
+            content: '';
+            left: 8px;
+            bottom: 5px;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid $turquoise-deep;
+            border-bottom: 1px solid $turquoise-deep;
+        }
+        &::after {
+            content: '';
+            left: 8px;
+            bottom: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid $turquoise-deep;
+            border-bottom: 1px solid $turquoise-deep;
+        }
+
+    }
+    #spoiler-checker:checked + [for=spoiler-checker] {
+        &::before {
+            transform: rotate(225deg);
+            bottom: 2px;
+        }
+        &::after {
+            transform: rotate(225deg);
+            bottom: 7px;
+        }
+    }
+
+    #spoiler-checker:checked + [for=spoiler-checker] + .about__description {
+        max-height: fit-content;
+    }
+
+	&__img { 
+    }
+}
+
+.swiper { 
+    padding: 16px;
+    padding-bottom: 38px;
+    .swiper-wrapper { 
+
+    }
+    .swiper-pagination { 
+        position: relative;
+        bottom: -14px;
+    }
+    
+    .swiper-slide{ 
+        display: flex;
+        justify-content: space-between;
+        max-width: 240px;
+        padding: 16px;
+        margin-right: 16px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background-color: #fff;
+    }
+    .swiper-slide > img {
+        object-fit: contain;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: $middle-soft-gray;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $soft-dark-gray;
+    }
+}
+
+.repair {
+    background-color: $soft-gray;
+
+	&__title-brand { 
+
+    }
+    .technic-slide {
+        min-height: 160px;
+        &>p {
+            font-weight: 600;
+        }
+        &>.circle {
+            align-self: end;
+        }
+    }
+}
 // .title-wrapper { }
 // .price {
 // 	&__title { }
 // 	&__slider { }
-// 	&__table { }
+    // .table { }
+    // &__row { }
 // 	&__order { }
 // 	&__description { }
 // 	&__offer { }

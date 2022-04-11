@@ -1,0 +1,11 @@
+.footer { 
+    display: grid;
+	grid-row-gap: 16px;
+    padding: 16px 0;
+    font-size: 14px;
+    line-height: 16px;
+    border-top: solid 1px $turquoise;
+    color: $charcoal;
+    opacity: 0.72;
+    text-align: center;
+}

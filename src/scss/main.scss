@@ -3,7 +3,9 @@
 @import "vendor";
 @import "vars";
 @import "settings";
+@import "header";
 @import "price";
+@import "footer";
 
 body {
     font-weight: 100;
@@ -35,7 +37,6 @@ body {
 .logo-link { }
 
 .circle {
-    
     position: relative;
     width: 40px;
     height: 40px;
@@ -61,6 +62,31 @@ body {
     margin: 8px;
 }
 
+.button {
+    position: relative;
+    background-color: $cherry;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-family: TTLakesDemiBold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    padding: 4px 40px 4px 12px;
+    &__inner::after {
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 6px;
+        height: 6px;
+        bottom: 14px;
+        right: 17px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
+
 .block-title {
     font-size: 16px;
     line-height: 24px;
@@ -74,190 +100,6 @@ body {
     background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
     color: $menu-text-color;
     text-transform: uppercase;
-}
-
-#burger, [for=burger] {
-    display: none;
-}
-
-[for=burger] {
-    position: relative;
-    margin-left: 0px;
-    margin-right: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    transition: $transition;
-    background-color: $cherry;
-    &::before {
-        content: '';
-        position: absolute;
-        border-bottom: 2px solid $white;
-        top: 12px;
-        left: 11px;
-        width: 18px;
-        transition: $transition;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        border-bottom: 2px solid $white;
-        top: 19px;
-        left: 11px;
-        width: 10px;
-        transition: $transition;
-    }
-    .line::after {
-        content: '';
-        position: absolute;
-        border-bottom: 2px solid $white;
-        bottom: 12px;
-        left: 11px;
-        width: 14px;
-        transition: $transition;
-    }
-}
-
-#burger:checked + label + aside {
-    top: 0%;
-    transition: $transition;
-}
-
-#burger:checked + [for=burger]{
-    &::before {
-        transition: $transition;
-        top: 19px;
-        left: 9px;
-        width: 22px;
-        transform: rotate(45deg);
-    }
-    &::after {
-        transition: $transition;
-        width: 22px;
-        left: 9px;
-        transform: rotate(-45deg);
-    }
-    .line::after {
-        border-bottom: 2px solid $cherry;
-    }
-}
-
-.burger__menu {
-    top: -250%;
-    z-index: 50;
-    position: absolute;
-    left: 0;
-    padding: 16px 16px 32px;
-    background-color: $white;
-    text-decoration: none;
-    list-style: none;
-    transition: $transition;
-}
-
-.burger {
-    &__menu-header {
-        display: flex;
-        justify-content: flex-end;
-    }
-    &__logo {
-        margin-bottom: 25px;
-        margin-left: 56px;
-        margin-right: 70px;
-    }
-    &__search {
-        background-image: url(../assets/img/search.svg);
-        margin-right: 16px;
-    }
-    &__nav {    }
-    &__list-item {
-        font-weight: 600;
-        line-height: 24px;
-        font-size: 16px;
-        letter-spacing: 0.2px;
-        color: #1B1C21;
-        margin-bottom: 24px;
-    }
-    &__footer {
-        color: #1B1C21;
-    }
-}
-
-.email {
-    margin-bottom: 12px;
-}
-
-.tel {
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.6px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.burger__contacts {
-    @media (max-width: 320px) {
-        display: flex;
-        margin-bottom: 8px;
-    }
-    .contacts {
-        &__call { 
-            background-image: url(../assets/img/call.svg);
-            margin-left: 0px;
-        }
-        &__chat { 
-            background-image: url(../assets/img/chat.svg);
-        }
-        &__profile { 
-            background-image: url(../assets/img/profile.svg);
-        }
-    }
-}
-
-@media (max-width: 320px) {
-    [for=burger] {
-        display: block;
-        z-index: 100;
-    }
-}
-
-.contacts {
-    position: relative;
-    @media (max-width: 320px) {
-        display: none;
-    }
-	&__call { 
-        background-image: url(../assets/img/call.svg);
-    }
-	&__chat { 
-        background-image: url(../assets/img/chat.svg);
-    }
-	&__profile { 
-        background-image: url(../assets/img/profile.svg);
-    }
-}
-
-.logo-mobile {
-    margin-right: 31px;
-}
-
-.repair-icon {
-    background-image: url(../assets/img/repair.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    &::before {
-        content: '';
-        border-right: 2px solid $light-gray;
-        border-radius: 5px;
-        height: 32px;
-        position: absolute;
-        top: 4px;
-        left: -20px;
-    }
-}
-
-.checkstatus { 
-    background-image: url(../assets/img/checkstatus.svg);
-    margin-right: 0;
 }
 
 .main {
@@ -339,9 +181,10 @@ body {
     }
     &__spoiler {
         margin-left: 32px;
+        font-weight: 600;
         &::before {
             content: '';
-            left: 8px;
+            left: 20px;
             bottom: 5px;
             position: absolute;
             transform: rotate(45deg);
@@ -352,7 +195,7 @@ body {
         }
         &::after {
             content: '';
-            left: 8px;
+            left: 20px;
             bottom: 10px;
             position: absolute;
             transform: rotate(45deg);
@@ -384,13 +227,15 @@ body {
 
 .swiper { 
     padding: 16px;
-    padding-bottom: 38px;
     .swiper-wrapper { 
 
     }
     .swiper-pagination { 
         position: relative;
-        bottom: -14px;
+        padding: 16px 0;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
     }
     
     .swiper-slide{ 
@@ -433,17 +278,4 @@ body {
         }
     }
 }
-// .title-wrapper { }
-// .price {
-// 	&__title { }
-// 	&__slider { }
-    // .table { }
-    // &__row { }
-// 	&__order { }
-// 	&__description { }
-// 	&__offer { }
-// }
-// .footer { }
-// .copyright { }
-// .conf { }
-// .description { }
+

@@ -1,0 +1,94 @@
+.about {
+    display: grid;
+    grid-row-gap: 16px;
+    padding-top: 8px;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+	&__description { 
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        overflow: hidden;
+        max-height: 90px;
+        margin-bottom: 16px;
+        padding: 0 16px;
+        @media (min-width: 768px) {
+            max-height: 145px;
+        }
+    }
+    #spoiler-checker {
+        display: none;
+    }
+    .spoiler-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        @media (min-width: 768px) {
+            width: 45%;
+            min-height: 200px;
+            justify-content: flex-end;
+        }
+    }
+    &__spoiler {
+        position: relative;
+        margin-left: 32px;
+        font-weight: 600;
+        >span {
+            margin-left: 16px;
+        }
+        &::before {
+            content: '';
+            left: -10px;
+            bottom: 5px;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid $turquoise-deep;
+            border-bottom: 1px solid $turquoise-deep;
+        }
+        &::after {
+            content: '';
+            left: -10px;
+            bottom: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid $turquoise-deep;
+            border-bottom: 1px solid $turquoise-deep;
+        }
+
+    }
+    #spoiler-checker:checked + [for=spoiler-checker] {
+        &::before {
+            transform: rotate(225deg);
+            bottom: 2px;
+        }
+        &::after {
+            transform: rotate(225deg);
+            bottom: 7px;
+        }
+    }
+
+    #spoiler-checker:checked + [for=spoiler-checker] + .about__description {
+        max-height: fit-content;
+    }
+
+	&__img { 
+        background-image: url(../assets/img/cps.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 176px;
+        @media (min-width: 768px) {
+            background-image: url(../assets/img/cps768.png);
+            margin-right: 16px;
+            width: 45%;
+            max-height: 200px;
+            border-radius: 6px;
+        }
+    }
+}

@@ -1,4 +1,8 @@
 .header {
+    display: flex;
+    padding: 17px 16px;
+    background-color: $white;
+    border-bottom: solid 1px $turquoise;
     justify-content: space-between;
     
     &__left {
@@ -149,7 +153,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
     [for=burger] {
         display: block;
         z-index: 100;
@@ -160,7 +164,7 @@
     position: relative;
     display: flex;
     padding-right: 24px;
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
         display: none;
     }
 	&__call { 

@@ -4,6 +4,9 @@
 @import "vars";
 @import "settings";
 @import "header";
+@import "serviceTop";
+@import "about";
+@import "repair";
 @import "price";
 @import "footer";
 
@@ -17,14 +20,6 @@ body {
     grid-row-gap: 24px;
     @media (max-width: 320px) {
     }
-}
-
-.header { 
-    display: flex;
-    padding: 17px 16px;
-    background-color: $white;
-    border-bottom: solid 1px $turquoise;
-    &__contacts { }
 }
 
 .logo {
@@ -108,122 +103,9 @@ body {
     grid-row-gap: 16px;
 }
 
-.service { 
-    background-color: #F8F8F8;
-    &__top {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-row-gap: 16px;
-        padding: 0 16px;
-    }
 
-    &__title { 
-        font-family: TTLakesBold;
-        font-size: 28px;
-        line-height: 40px;
-        letter-spacing: -0.6px;
-    }
-    &__nav { 
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    &__list { 
-        display: flex;
-        overflow-x: scroll;
-        white-space: nowrap;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-    &__list-item { 
-        padding: 8px 8px 8px 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        border: 2px solid $soft-gray;
-        border-radius: 6px;
-        &:active {
-            background-color: $white;
-            border: 2px solid $turquoise-strong;
-            border-radius: 6px;
-        }
-        &__active {
-            background-color: $white;
-            border: 2px solid $turquoise-strong;
-            border-radius: 6px;
 
-        }
 
-    }
-    &__item-link { 
-    }
-
-}
-
-.about {
-    display: grid;
-    grid-row-gap: 16px;
-	&__description { 
-        font-size: 14px;
-        line-height: 18px;
-        letter-spacing: 0.2px;
-        overflow: hidden;
-        max-height: 90px;
-        margin-bottom: 16px;
-        padding: 0 16px;
-    }
-    #spoiler-checker {
-        display: none;
-    }
-    .spoiler-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        position: relative;
-    }
-    &__spoiler {
-        margin-left: 32px;
-        font-weight: 600;
-        &::before {
-            content: '';
-            left: 20px;
-            bottom: 5px;
-            position: absolute;
-            transform: rotate(45deg);
-            width: 5px;
-            height: 5px;
-            border-right: 1px solid $turquoise-deep;
-            border-bottom: 1px solid $turquoise-deep;
-        }
-        &::after {
-            content: '';
-            left: 20px;
-            bottom: 10px;
-            position: absolute;
-            transform: rotate(45deg);
-            width: 5px;
-            height: 5px;
-            border-right: 1px solid $turquoise-deep;
-            border-bottom: 1px solid $turquoise-deep;
-        }
-
-    }
-    #spoiler-checker:checked + [for=spoiler-checker] {
-        &::before {
-            transform: rotate(225deg);
-            bottom: 2px;
-        }
-        &::after {
-            transform: rotate(225deg);
-            bottom: 7px;
-        }
-    }
-
-    #spoiler-checker:checked + [for=spoiler-checker] + .about__description {
-        max-height: fit-content;
-    }
-
-	&__img { 
-    }
-}
 
 .swiper { 
     padding: 16px;
@@ -260,22 +142,10 @@ body {
     .swiper-pagination-bullet-active {
         background-color: $soft-dark-gray;
     }
-}
-
-.repair {
-    background-color: $soft-gray;
-
-	&__title-brand { 
-
-    }
-    .technic-slide {
-        min-height: 160px;
-        &>p {
-            font-weight: 600;
-        }
-        &>.circle {
-            align-self: end;
-        }
+    @media (min-width: 768px) {
+        display: none;
     }
 }
+
+
 

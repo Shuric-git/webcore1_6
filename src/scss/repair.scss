@@ -1,0 +1,40 @@
+.repair {
+    background-color: $soft-gray;
+
+	&__title-brand { 
+
+    }
+    .technic-slide {
+        min-height: 160px;
+        &>p {
+            font-weight: 600;
+        }
+        &>.circle {
+            align-self: end;
+        }
+    }
+
+    .brandlist {
+        display: none;
+        padding: 24px;
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 24px;
+            grid-row-gap: 16px;
+        }
+        .brand-item {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-between;
+            // max-width: 224px;
+            max-height: 72px;
+            // margin-right: 16px;
+            padding: 16px;
+            border: 1px solid #EAEAEA;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+    }
+}
+

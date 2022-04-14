@@ -9,6 +9,7 @@
 @import "repair";
 @import "price";
 @import "footer";
+@import "swiper";
 
 body {
     font-weight: 100;
@@ -95,6 +96,48 @@ body {
     background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
     color: $menu-text-color;
     text-transform: uppercase;
+    @media (min-width: 768px) {
+        padding-left: 24px;
+    }
+}
+
+.spoiler {
+    position: relative;
+    margin-left: 32px;
+    font-weight: 600;
+    padding-top: 16px;
+    >span {
+        margin-left: 16px;
+    }
+    &::before {
+        content: '';
+        left: -5px;
+        bottom: 5px;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 5px;
+        height: 5px;
+        border-right: 1px solid $turquoise-deep;
+        border-bottom: 1px solid $turquoise-deep;
+    }
+    &::after {
+        content: '';
+        left: -5px;
+        bottom: 10px;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 5px;
+        height: 5px;
+        border-right: 1px solid $turquoise-deep;
+        border-bottom: 1px solid $turquoise-deep;
+    }
+
+}
+
+.spoiler-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    // width: 100%;
 }
 
 .main {
@@ -104,48 +147,6 @@ body {
 }
 
 
-
-
-
-.swiper { 
-    padding: 16px;
-    .swiper-wrapper { 
-
-    }
-    .swiper-pagination { 
-        position: relative;
-        padding: 16px 0;
-    }
-    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 0;
-    }
-    
-    .swiper-slide{ 
-        display: flex;
-        justify-content: space-between;
-        max-width: 240px;
-        padding: 16px;
-        margin-right: 16px;
-        border: 1px solid #EAEAEA;
-        border-radius: 6px;
-        background-color: #fff;
-    }
-    .swiper-slide > img {
-        object-fit: contain;
-    }
-    .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background-color: $middle-soft-gray;
-        opacity: 1;
-    }
-    .swiper-pagination-bullet-active {
-        background-color: $soft-dark-gray;
-    }
-    @media (min-width: 768px) {
-        display: none;
-    }
-}
 
 
 

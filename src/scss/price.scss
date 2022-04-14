@@ -31,10 +31,26 @@
 		}
 	}
 	&__table { 
-		@media (max-width: 320px) {
-			display: none;
+		display: none;
+		padding: 32px;
+		border-collapse: collapse;
+		@media (min-width: 768px) {
+			display: block;
 		}
+
 	}
+
+	.table__row > td {
+		height: 64px;
+		padding: 0 32px;
+		background-color: #fff;
+		border-top: 1px solid #eaeaea;
+		border-radius: 6px;
+	}
+
+	.table__row {
+	}
+
 	&__description { 
 		font-size: 14px;
 		line-height: 20px;

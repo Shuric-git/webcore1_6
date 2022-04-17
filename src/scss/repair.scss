@@ -1,17 +1,21 @@
 .repair {
     background-color: $soft-gray;
 
-    .technic-slide {
-
+    .technic-swiper {
+        @media (min-width: 768px) {
+            padding-bottom: 3px;
+        }
     }
 
     .swiper {
-        // max-height: 124px;
         overflow-y: hidden;
     }
 
     .brand-swiper {
-        // padding: 24px;
+        padding-bottom: 16px;
+    }
+
+    .brand-swiper-wrapper {
         @media (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -23,7 +27,6 @@
             display: flex;
             justify-content: space-between;
             max-height: 72px;
-            // max-width: 190px;
             padding: 16px;
             border: 1px solid #EAEAEA;
             border-radius: 6px;
@@ -38,6 +41,8 @@
         display: none;
         @media (min-width: 768px) {
             display: block;
+            margin-top: 20px;
+            margin-bottom: 35px;
         }
     }
     #repair__spoiler-checker {
@@ -54,20 +59,20 @@
         }
     }
 
-    #repair__spoiler-checker:checked + [for=repair__spoiler-checker] + .swiper > .brand-swiper {
+    #repair__spoiler-checker:checked + [for=repair__spoiler-checker] + .swiper > .brand-swiper-wrapper {
         max-height: fit-content;
     }
 
-    .technic-swiper {
-        display: none;
-        padding: 24px;
+    .technic-swiper-wrapper {
+        &+.swiper-pagination {
+            padding-top: 12px;
+        }
         @media (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 24px;
             grid-row-gap: 16px;
-            max-height: 145px;
-            overflow-y: hidden;
+            max-height: 165px;
         }
         .technic-item {
             display: flex;
@@ -91,6 +96,7 @@
         display: none;
         @media (min-width: 768px) {
             display: block;
+            margin-top: 18px;
         }
     }
     #technic__spoiler-checker {
@@ -107,7 +113,7 @@
         }
     }
 
-    #technic__spoiler-checker:checked + [for=technic__spoiler-checker] + .swiper {
+    #technic__spoiler-checker:checked + [for=technic__spoiler-checker] + .swiper > .technic-swiper-wrapper {
         max-height: fit-content;
     }
 }

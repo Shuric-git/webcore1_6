@@ -1,44 +1,53 @@
-  // import Swiper JS
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-const slider = document.querySelector('.swiper');
+const sliders = document.querySelectorAll('.swiper');
 
-let mySlider;
 
-function mobileSlider() {
-  if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
-    mySlider = new Swiper(slider, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      modules: [Navigation, Pagination],
-
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-
-    slider.dataset.mobile = 'true';
-  }
-
-  if (window.innerWidth > 767) {
-    slider.dataset.mobile = 'false';
-
-    if (slider.classList.contains('swiper-initialized')) {
-      mySlider.destroy();
+sliders.forEach((el) => {
+  let mySlider;
+  function mobileSlider() {
+    if (window.innerWidth <= 767 && el.dataset.mobile == 'false') {
+      mySlider = new Swiper(el, {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+        modules: [Navigation, Pagination],
+        loop: true,
+  
+        pagination: {
+          el: el.querySelector('.swiper-pagination'),
+        },
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: el.querySelector('.swiper-button-next'),
+        //   prevEl: el.querySelector('.swiper-button-prev'),
+        // },
+      });
+  
+      el.dataset.mobile = 'true';
+    }
+  
+    if (window.innerWidth > 767) {
+      el.dataset.mobile = 'false';
+  
+      if (el.classList.contains('swiper-initialized')) {
+        console.log(mySlider)
+        mySlider.destroy();
+      }
     }
   }
-}
-
-mobileSlider();
-
-window.addEventListener('resize', () => {
+  
   mobileSlider();
-});
+  
+  window.addEventListener('resize', () => {
+    mobileSlider();
+  });
+})
 
 
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+
+
+
+
+
+
+

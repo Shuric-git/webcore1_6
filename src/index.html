@@ -13,7 +13,7 @@
     <header class="header">
       <div class="header__left">
         <input type="checkbox" id="burger">
-        <label for="burger" class="icon"><span class="line"></span></label>
+        <label for="burger" class="icon burger-icon"><span class="line"></span></label>
 
         <aside class="burger__menu">
           <header class="burger__menu-header">
@@ -89,6 +89,7 @@
             <li class="service__list-item"><a href="" class="service__item-link">Цены на услуги</a></li>
             <li class="service__list-item"><a href="" class="service__item-link">Адреса сервисных центров</a></li>
             <li class="service__list-item"><a href="" class="service__item-link">Специальные цены</a></li>
+            <li class="service__list-item"><a href="" class="service__item-link">Отзывы</a></li>
           </ul>
         </nav>
       </section>
@@ -110,16 +111,12 @@
           <p class="repair__title-brand gradient-title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
         </div>
 
-
         <div class="spoiler-wrapper">
           <input type="checkbox" id="repair__spoiler-checker">
-          <label for="repair__spoiler-checker" class="repair__spoiler spoiler"><span>Читать далее</span></label>
+          <label for="repair__spoiler-checker" class="repair__spoiler spoiler"><span>Показать все</span></label>
 
-
-          <div class="swiper" data-mobile="false">
-
-            <div class="swiper-wrapper brand-swiper">
-
+          <div class="swiper brand-swiper" data-mobile="false">
+            <div class="swiper-wrapper brand-swiper-wrapper">
               <div class="swiper-slide brand-item">
                 <img src="assets/img/logo/Bitmap.png" alt="">
                 <div class="circle"></div>
@@ -183,109 +180,89 @@
         </div>
         <div class="spoiler-wrapper">
           <input type="checkbox" id="technic__spoiler-checker">
-          <label for="technic__spoiler-checker" class="technic__spoiler spoiler"><span>Читать далее</span></label>
-          <!-- Slider main container -->
-          <div class="swiper" data-mobile="false">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper technic-swiper">
-              <!-- Slides -->
+          <label for="technic__spoiler-checker" class="technic__spoiler spoiler"><span>Показать все</span></label>
+          
+          <div class="swiper technic-swiper" data-mobile="false">
+            <div class="swiper-wrapper technic-swiper-wrapper">
               <div class="swiper-slide technic-item">
                 <p>Ремонт ноутбуков</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт планшетов</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт ПК</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт Монииторов</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт Мобильных устройств</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт разбитых сердец</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт аксессуаров</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт кривой вёрстки</p>
                 <div class="circle"></div>
               </div>
               <div class="swiper-slide technic-item">
-
+                <p>Ремонт консолей</p>
                 <div class="circle"></div>
               </div>
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
         </div>
-        <!-- <div class="repair__technic-list">
-            <div class="technic-item technic-item">
-              <p>Ремонт ноутбуков</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт планшетов</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт ПК</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт мониторов</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт игровых клавиатур</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремнот компьютерных кресел</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт раша на Б</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>Ремонт скилла</p>
-              <div class="circle"></div>
-            </div>
-            <div class="technic-item technic-item">
-              <p>I need healing</p>
-              <div class="circle"></div>
-            </div> -->
       </section>
 
       <section class="price">
-        <div class="title-wrapper price__title">
+        <div class="title-wrapper">
           <p class="price__title gradient-title">ЦЕНЫ НА УСЛУГИ</p>
         </div>
-        <!-- Slider main container -->
-        <div class="swiper" data-mobile="false">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
+        <div class="swiper price-swiper" data-mobile="false">
+          <div class="price-headers">
+            <p>Ремонтные услуги</p>
+            <p>Цена</p>
+            <p>Срок</p>
+          </div>
+          <div class="swiper-wrapper price-swiper-wrapper">
+
+            <div class="swiper-slide price-item">
               <div class="service-name">
                 <p>Ремонтные услуги</p>
-                <p>Тестирование с выдачей технического заключения</p>
+                <p>Диагностика</p>
               </div>
               <div class="service-price">
                 <p>Цена</p>
                 <p>Бесплатно</p>
+              </div>
+              <div class="service-period">
+                <p>Срок</p>
+                <p>30 мин</p>
+              </div>
+              <button class="button price__button">
+                <span class="button__inner">заказать</span>
+              </button>
+            </div>
+            <div class="swiper-slide price-item">
+              <div class="service-name">
+                <p>Ремонтные услуги</p>
+                <p>Замена дисплея</p>
+              </div>
+              <div class="service-price">
+                <p>Цена</p>
+                <p>1 000 ₽</p>
               </div>
               <div class="service-period">
                 <p>Срок</p>
@@ -295,97 +272,65 @@
                 <span class="button__inner">заказать</span>
               </button>
             </div>
-            <div class="swiper-slide">
-
+            <div class="swiper-slide price-item">
+              <div class="service-name">
+                <p>Ремонтные услуги</p>
+                <p>Замена полифонического динамика</p>
+              </div>
+              <div class="service-price">
+                <p>Цена</p>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="service-period">
+                <p>Срок</p>
+                <p>30-120 мин</p>
+              </div>
               <button class="button price__button">
                 <span class="button__inner">заказать</span>
               </button>
             </div>
-            <div class="swiper-slide">
-
+            <div class="swiper-slide price-item">
+              <div class="service-name">
+                <p>Ремонтные услуги</p>
+                <p>Тестирование с выдачей технического заключения</p>
+              </div>
+              <div class="service-price">
+                <p>Цена</p>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="service-period">
+                <p>Срок</p>
+                <p>30-120 мин</p>
+              </div>
               <button class="button price__button">
                 <span class="button__inner">заказать</span>
               </button>
             </div>
-            <div class="swiper-slide">
-
-              <button class="button price__button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </div>
-            <div class="swiper-slide">
-
+            <div class="swiper-slide price-item">
+              <div class="service-name">
+                <p>Ремонтные услуги</p>
+                <p>Замена программного обеспечения</p>
+              </div>
+              <div class="service-price">
+                <p>Цена</p>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="service-period">
+                <p>Срок</p>
+                <p>30-120 мин</p>
+              </div>
               <button class="button price__button">
                 <span class="button__inner">заказать</span>
               </button>
             </div>
           </div>
-          <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
         </div>
 
-        <table class="price__table table">
-          <tr class="table__row">
-            <th>Ремонтные услуги</th>
-            <th>Цена</th>
-            <th>Срок</th>
-            <th></th>
-          </tr>
-          <tr class="table__row">
-            <td>Диагностика</td>
-            <td>Бесплатно</td>
-            <td>30 мин</td>
-            <td>
-              <button class="button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td>Замена дисплея</td>
-            <td>1000 р</td>
-            <td>30-120 мин</td>
-            <td>
-              <button class="button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td>Замена полифонического динамика</td>
-            <td>1000 р</td>
-            <td>30-120 мин</td>
-            <td>
-              <button class="button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td>Тестрование с выдачей технического заключения</td>
-            <td>1000 р</td>
-            <td>30-120 мин</td>
-            <td>
-              <button class="button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td>Замена програмного обеспечения</td>
-            <td>1000 р</td>
-            <td>30-120 мин</td>
-            <td>
-              <button class="button">
-                <span class="button__inner">заказать</span>
-              </button>
-            </td>
-          </tr>
-        </table>
         <p class="price__description">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для
-          получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p><br>
-        <p>
-          <a href="" class="price__offer">Получить коммерческое предложение</a>
+          получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+        <p class="price__offer">
+          <a href=""><span>Получить коммерческое предложение</span></a>
         </p>
       </section>
     </main>

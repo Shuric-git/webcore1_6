@@ -2,6 +2,7 @@
 @import "fonts";
 @import "vendor";
 @import "vars";
+@import "swiper";
 @import "settings";
 @import "header";
 @import "serviceTop";
@@ -9,7 +10,6 @@
 @import "repair";
 @import "price";
 @import "footer";
-@import "swiper";
 
 body {
     font-weight: 100;
@@ -25,6 +25,8 @@ body {
     }
     @media (min-width: 1440px) {
         grid-column: 2;
+        grid-row-gap: 50px;
+        padding-bottom: 131px;
     }
 }
 
@@ -35,6 +37,7 @@ body {
     @media (min-width: 1440px) {
         grid-template-columns: 2fr;
         justify-items: start;
+        position: relative;
     }
 }
 
@@ -67,6 +70,8 @@ body {
     width: 40px;
     height: 40px;
     margin: 8px;
+    background-color: $cherry;
+    border-radius: 25px;
 }
 
 .button {

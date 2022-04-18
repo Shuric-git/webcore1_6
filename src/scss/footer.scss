@@ -27,5 +27,10 @@
     }
     @media (min-width: 1440px) {
         grid-column: 2;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 31px 21px;
+        width: 100%;
     }
 }

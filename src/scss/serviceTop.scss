@@ -12,6 +12,7 @@
         @media (min-width: 1440px) {
             padding-top: 42px;
             grid-row-gap: 8px;
+            margin-bottom: -50px;
         }
     }
 
@@ -66,7 +67,4 @@
         }
 
     }
-    &__item-link { 
-    }
-
 }

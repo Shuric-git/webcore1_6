@@ -1,18 +1,15 @@
 .repair {
     background-color: $soft-gray;
 
-    .technic-swiper {
-        @media (min-width: 768px) {
-            padding-bottom: 3px;
-        }
-    }
-
     .swiper {
         overflow-y: hidden;
     }
 
     .brand-swiper {
         padding-bottom: 16px;
+        @media (min-width: 1440px) {
+            padding-right: 47px;
+        }
     }
 
     .brand-swiper-wrapper {
@@ -22,6 +19,10 @@
             grid-column-gap: 24px;
             grid-row-gap: 16px;
             max-height: 150px;
+        }
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 32px;
         }
         .brand-item {
             display: flex;
@@ -44,6 +45,9 @@
             margin-top: 20px;
             margin-bottom: 35px;
         }
+        @media (min-width: 1440px) {
+            margin-bottom: 55px;
+        }
     }
     #repair__spoiler-checker {
         display: none;
@@ -62,6 +66,14 @@
     #repair__spoiler-checker:checked + [for=repair__spoiler-checker] + .swiper > .brand-swiper-wrapper {
         max-height: fit-content;
     }
+    .technic-swiper {
+        @media (min-width: 768px) {
+            padding-bottom: 3px;
+        }
+        @media (min-width: 1440px) {
+            padding-right: 47px;
+        }
+    }
 
     .technic-swiper-wrapper {
         &+.swiper-pagination {
@@ -73,6 +85,10 @@
             grid-column-gap: 24px;
             grid-row-gap: 16px;
             max-height: 165px;
+        }
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 32px;
         }
         .technic-item {
             display: flex;

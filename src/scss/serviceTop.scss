@@ -17,10 +17,19 @@
     }
 
     &__title { 
+        position: relative;
         font-family: TTLakesBold;
         font-size: 28px;
         line-height: 40px;
         letter-spacing: -0.6px;
+        &::before {
+            @include titlePrefix(-1px, -15px)
+        }
+        @media (min-width: 768px) {
+            &::before {
+                @include titlePrefix(-1px, -23px)
+            }
+        }
     }
     &__nav { 
         display: flex;

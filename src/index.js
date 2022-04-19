@@ -1,53 +1,37 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+let closeCall = document.querySelector('.close-call');
+let closeMessage = document.querySelector('.close-message');
+let modalCall = document.querySelector('.modal__call');
+let modalMessage = document.querySelector('.modal__message');
+let contactsCall = document.querySelectorAll('.contacts__call');
+let contactsMessage = document.querySelectorAll('.contacts__message');
+let burgerList = document.querySelector('.burger__list');
+let burgerListItems = document.querySelectorAll('.burger__list-item');
 
-const sliders = document.querySelectorAll('.swiper');
+closeCall.addEventListener('click', ()=> {
+    modalCall.classList.toggle('modal__closed')
+});
 
+closeMessage.addEventListener('click', ()=> {
+    modalMessage.classList.toggle('modal__closed')
+});
 
-sliders.forEach((el) => {
-  let mySlider;
-  function mobileSlider() {
-    if (window.innerWidth <= 767 && el.dataset.mobile == 'false') {
-      mySlider = new Swiper(el, {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        modules: [Navigation, Pagination],
-        loop: true,
-  
-        pagination: {
-          el: el.querySelector('.swiper-pagination'),
-        },
-        // Navigation arrows
-        // navigation: {
-        //   nextEl: el.querySelector('.swiper-button-next'),
-        //   prevEl: el.querySelector('.swiper-button-prev'),
-        // },
-      });
-  
-      el.dataset.mobile = 'true';
+contactsCall.forEach( (item) => {
+    item.addEventListener('click', () => {
+        modalCall.classList.toggle('modal__closed')
+    });
+});
+
+contactsMessage.forEach( (item) => {
+    item.addEventListener('click', () => {
+        modalMessage.classList.toggle('modal__closed')
+    });
+});
+
+burgerList.addEventListener('click', (ev) => {
+    if (ev.target.tagName === 'LI') {
+        burgerListItems.forEach( (item) => {
+            item.classList.remove('active-item')
+        })
+        ev.target.classList.toggle('active-item')
     }
-  
-    if (window.innerWidth > 767) {
-      el.dataset.mobile = 'false';
-  
-      if (el.classList.contains('swiper-initialized')) {
-        console.log(mySlider)
-        mySlider.destroy();
-      }
-    }
-  }
-  
-  mobileSlider();
-  
-  window.addEventListener('resize', () => {
-    mobileSlider();
-  });
-})
-
-
-
-
-
-
-
-
-
+});

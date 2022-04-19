@@ -32,3 +32,13 @@ $border-color: #b2dfdb; /* Цвет граней */
 $th-color: #fbc02d; /* Цвет элементов заголовка */
 
 $transition: all .3s ease-in-out;
+
+@mixin titlePrefix($top, $left) {
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    height: 39px;
+    border-left: 3px solid #41F6D7;
+    border-radius: 5px;
+}

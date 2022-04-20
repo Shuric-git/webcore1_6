@@ -9,11 +9,13 @@
         padding: 0;
         grid-column: 1;
     }
+
     
     &__left {
         display: flex;
         .burger-icon {
             margin-left: 0;
+            z-index: 300;
             @media (min-width: 768px) {
                 margin-left: 8px;
                 margin-right: 16px;
@@ -112,10 +114,12 @@
     }
 }
 
-#burger:checked + label + aside {
-    left: 0%;
-    transition: $transition;
-}
+// #burger:checked + label + aside {
+//     left: 0%;
+//     transition: $transition;
+// }
+
+
 
 #burger:checked + [for=burger]{
     &::before {
@@ -146,7 +150,7 @@
     list-style: none;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     transition: $transition;
-    z-index: 50;
+    z-index: 275;
     @media (min-width: 1440px) {
         position: static;
         top: 0;
@@ -227,6 +231,11 @@
             }
         }
     }
+}
+
+.burger-open {
+    left: 0%;
+    transition: $transition;
 }
     
 .email {

@@ -10,82 +10,86 @@
 
 <body>
   <div class="container">
-
-    <div class="modal modal__call">
-      <div class="close-button close-call icon"></div>
+    <div class="burger-overlay disabled"></div>
+    <div class="modal-overlay disabled">
+      <div class="modal modal__call modal__closed">
+        <div class="close-button close-call icon"></div>
       <h2 class="modal__title block-title">Заказать звонок</h2>
       <input type="text" id="call__tel" class="modal__input" placeholder="Телефон">
       <label for="call__tel"></label>
       <p class="modal__agreement">
         Нажимая “отправить”, вы даете согласие на 
         <a href="#">обработку персональных данных</a>
-         и соглашаетесь с нашей 
-         <a href="#">политикой конфиденциальности</a>
-        </p>
+        и соглашаетесь с нашей 
+        <a href="#">политикой конфиденциальности</a>
+      </p>
       <div class="modal__submit-button button">&nbsp;&nbsp;отправить</div>
-    </div>
+      </div>
 
-    <div class="modal modal__message">
-      <div class="close-button close-message icon"></div>
-      <h2 class="modal__title block-title">Обратная связь</h2>
-      <input type="text" id="message__name" class="modal__input" placeholder="Имя">
-      <label for="message__name"></label>
-      <input type="tel" id="message__tel" class="modal__input" placeholder="Телефон">
-      <label for="message__tel"></label>
-      <input type="email" id="message__email" class="modal__input" placeholder="Электронная почта">
-      <label for="message__email"></label>
-      <input type="textarea" id="message__message" class="modal__input" placeholder="Сообщение">
-      <label for="message__message"></label>
-      <p class="modal__agreement">
-        Нажимая “отправить”, вы даете согласие на 
-        <a href="#">обработку персональных данных</a>
-         и соглашаетесь с нашей 
-         <a href="#">политикой конфиденциальности</a>
+      <div class="modal modal__message modal__closed">
+        <div class="close-button close-message icon"></div>
+        <h2 class="modal__title block-title">Обратная связь</h2>
+        <input type="text" id="message__name" class="modal__input" placeholder="Имя">
+        <label for="message__name"></label>
+        <input type="tel" id="message__tel" class="modal__input" placeholder="Телефон">
+        <label for="message__tel"></label>
+        <input type="email" id="message__email" class="modal__input" placeholder="Электронная почта">
+        <label for="message__email"></label>
+        <input type="textarea" id="message__message" class="modal__input" placeholder="Сообщение">
+        <label for="message__message"></label>
+        <p class="modal__agreement">
+          Нажимая “отправить”, вы даете согласие на 
+          <a href="#">обработку персональных данных</a>
+          и соглашаетесь с нашей 
+          <a href="#">политикой конфиденциальности</a>
         </p>
-      <div class="modal__submit-button button">&nbsp;&nbsp;отправить</div>
+        <div class="modal__submit-button button">&nbsp;&nbsp;отправить</div>
+      </div>
     </div>
 
     <header class="header">
       <div class="header__left">
-        <input type="checkbox" id="burger">
-        <label for="burger" class="icon burger-icon"><span class="line"></span></label>
+        
 
-        <aside class="burger__menu">
-          <header class="burger__menu-header">
-            <div class="burger__logo logo">
-              <a href="" class="logo-link">
-                <img src="assets/img/logo.svg" alt="" class="logo-img">
-              </a>
+          <input type="checkbox" id="burger">
+          <label for="burger" class="icon burger-icon"><span class="line"></span></label>
+          <aside class="burger__menu">
+            <header class="burger__menu-header">
+              <div class="burger__logo logo">
+                <a href="" class="logo-link">
+                  <img src="assets/img/logo.svg" alt="" class="logo-img">
+                </a>
+              </div>
+              <div class="burger__search icon"></div>
+            </header>
+            <nav class="burger__nav">
+              <ul class="burger__list">
+                <li class="burger__list-item active-item">Ремонт техники</li>
+                <li class="burger__list-item">Услуги и сервисы</li>
+                <li class="burger__list-item">Корпоративным клиентам</li>
+                <li class="burger__list-item">Продавцам техники</li>
+                <li class="burger__list-item">Партнерам</li>
+                <li class="burger__list-item">Производителям</li>
+                <li class="burger__list-item">Наши сервисные центры</li>
+                <li class="burger__list-item">Контакты</li>
+              </ul>
+            </nav>
+            <div class="burger__contacts">
+              <div class="contacts__call icon"></div>
+              <div class="contacts__message icon"></div>
+              <div class="contacts__profile icon"></div>
             </div>
-            <div class="burger__search icon"></div>
-          </header>
-          <nav class="burger__nav">
-            <ul class="burger__list">
-              <li class="burger__list-item active-item">Ремонт техники</li>
-              <li class="burger__list-item">Услуги и сервисы</li>
-              <li class="burger__list-item">Корпоративным клиентам</li>
-              <li class="burger__list-item">Продавцам техники</li>
-              <li class="burger__list-item">Партнерам</li>
-              <li class="burger__list-item">Производителям</li>
-              <li class="burger__list-item">Наши сервисные центры</li>
-              <li class="burger__list-item">Контакты</li>
-            </ul>
-          </nav>
-          <div class="burger__contacts">
-            <div class="contacts__call icon"></div>
-            <div class="contacts__message icon"></div>
-            <div class="contacts__profile icon"></div>
-          </div>
-          <footer class="burger__footer">
-            <div class="email">mail@cps.com</div>
-            <div class="tel">8 800 890 8900</div>
-            <div class="language">
-              <span class="ru">RU</span>
-              <span class="en">EN</span>
-              <span class="ch">CH</span>
-            </div>
-          </footer>
-        </aside>
+            <footer class="burger__footer">
+              <div class="email">mail@cps.com</div>
+              <div class="tel">8 800 890 8900</div>
+              <div class="language">
+                <span class="ru">RU</span>
+                <span class="en">EN</span>
+                <span class="ch">CH</span>
+              </div>
+            </footer>
+          </aside>
+ 
 
         <div class="logo logo-mobile">
           <a href="" class="logo-link">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -35,7 +35,7 @@
         <label for="message__tel"></label>
         <input type="email" id="message__email" class="modal__input" placeholder="Электронная почта">
         <label for="message__email"></label>
-        <input type="textarea" id="message__message" class="modal__input" placeholder="Сообщение">
+        <textarea id="message__message" class="modal__input modal__textarea" placeholder="Сообщение" rows="5" cols="33"></textarea>
         <label for="message__message"></label>
         <p class="modal__agreement">
           Нажимая “отправить”, вы даете согласие на 
@@ -50,18 +50,17 @@
     <header class="header">
       <div class="header__left">
         
-
-          <input type="checkbox" id="burger">
-          <label for="burger" class="icon burger-icon"><span class="line"></span></label>
+        <div class="burger">
+          <div class="icon burger__icon"><span class="line"></span></div>
           <aside class="burger__menu">
-            <header class="burger__menu-header">
+            <div class="burger__menu-header">
               <div class="burger__logo logo">
                 <a href="" class="logo-link">
                   <img src="assets/img/logo.svg" alt="" class="logo-img">
                 </a>
               </div>
               <div class="burger__search icon"></div>
-            </header>
+            </div>
             <nav class="burger__nav">
               <ul class="burger__list">
                 <li class="burger__list-item active-item">Ремонт техники</li>
@@ -79,17 +78,17 @@
               <div class="contacts__message icon"></div>
               <div class="contacts__profile icon"></div>
             </div>
-            <footer class="burger__footer">
+            <div class="burger__footer">
               <div class="email">mail@cps.com</div>
               <div class="tel">8 800 890 8900</div>
               <div class="language">
-                <span class="ru">RU</span>
-                <span class="en">EN</span>
-                <span class="ch">CH</span>
+                <span class="ru lang">RU</span>
+                <span class="en lang">EN</span>
+                <span class="ch lang">CH</span>
               </div>
-            </footer>
+            </div>
           </aside>
- 
+        </div>
 
         <div class="logo logo-mobile">
           <a href="" class="logo-link">
@@ -101,42 +100,40 @@
       <div class="header__right">
         <div class="header__contacts contacts">
           <div class="contacts__call icon">
-            <a href=""></a>
           </div>
           <div class="contacts__message icon">
-            <a href=""></a>
           </div>
           <div class="contacts__profile icon">
-            <a href=""></a>
           </div>
         </div>
         <div class="header__check">
           <span class="header__check-description">Оставить заявку</span>
           <div class="repair-icon icon"></div>
           <span class="header__check-description">Статус ремонта</span>
-          <div class="checkstatus icon"></div>
+          <div class="checkstatus-icon icon"></div>
         </div>
       </div>
       
     </header>
 
     <main class="main">
-      <section class="service__top">
-        <h1 class="service__title">Услуги и сервисы</h1>
-        <nav class="sevice__nav">
-          <ul class="service__list">
-            <li class="service__list-item service__list-item__active"><a href=""
-                class="service__item-link">Ремонтируемые устройства</a></li>
-            <li class="service__list-item"><a href="" class="service__item-link">Дополнительные услуги</a></li>
-            <li class="service__list-item"><a href="" class="service__item-link">Цены на услуги</a></li>
-            <li class="service__list-item"><a href="" class="service__item-link">Адреса сервисных центров</a></li>
-            <li class="service__list-item"><a href="" class="service__item-link">Специальные цены</a></li>
-            <li class="service__list-item"><a href="" class="service__item-link">Отзывы</a></li>
-          </ul>
-        </nav>
+      <section class="service">
+        <div class="service__top">
+          <h1 class="service__title">Услуги и сервисы</h1>
+          <nav class="sevice__nav">
+            <ul class="service__list">
+              <li class="service__list-item service__list-item-active">Ремонтируемые устройства</li>
+              <li class="service__list-item">Дополнительные услуги</li>
+              <li class="service__list-item">Цены на услуги</li>
+              <li class="service__list-item">Адреса сервисных центров</li>
+              <li class="service__list-item">Специальные цены</li>
+              <li class="service__list-item">Отзывы</li>
+            </ul>
+          </nav>
+        </div>
       </section>
-      <section class="about">
-        <div class="spoiler-wrapper">
+      <div class="about">
+        <div class="about__spoiler-wrapper spoiler-wrapper">
           <input type="checkbox" id="about__spoiler-checker">
           <label for="about__spoiler-checker" class="about__spoiler spoiler"><span>Читать далее</span></label>
           <p class="about__description">
@@ -151,10 +148,10 @@
           </p>
         </div>
         <div class="about__img"></div>
-      </section>
+      </div>
       <section class="repair">
         <div class="title-wrapper block-title">
-          <p class="repair__title-brand gradient-title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
+          <h3 class="repair__title-brand gradient-title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h3>
         </div>
 
         <div class="spoiler-wrapper">
@@ -222,7 +219,7 @@
         </div>
 
         <div class="title-wrapper block-title">
-          <p class="repair__title-technic gradient-title">Ремонт различных видов техники</p>
+          <h3 class="repair__title-technic gradient-title">Ремонт различных видов техники</h3>
         </div>
         <div class="spoiler-wrapper">
           <input type="checkbox" id="technic__spoiler-checker">
@@ -274,7 +271,7 @@
 
       <section class="price">
         <div class="title-wrapper">
-          <p class="price__title gradient-title">ЦЕНЫ НА УСЛУГИ</p>
+          <h3 class="price__title gradient-title">ЦЕНЫ НА УСЛУГИ</h3>
         </div>
         <div class="swiper price-swiper" data-mobile="false">
           <div class="price-headers">
@@ -283,7 +280,6 @@
             <p>Срок</p>
           </div>
           <div class="swiper-wrapper price-swiper-wrapper">
-
             <div class="swiper-slide price-item">
               <div class="service-name">
                 <p>Ремонтные услуги</p>

@@ -1,7 +1,9 @@
 .price {
-	&__title {
+	&__title.gradient-title {
 		@media (min-width: 768px) {
-			padding-top: 21px !important;
+			padding-top: 21px;
+			font-weight: 100;
+        	font-size: 16px;
 		}
 	}
 	&-swiper {
@@ -95,33 +97,35 @@
 			grid-column: 2/3;
 		}
 	}
-		.price-headers {
-			display: none;
-			@media (min-width: 768px) {
-				display: flex;
-				padding: 16px;
-				padding-top: 11px;
-				color: $charcoal;	
-				font-size: 14px;
-				line-height: 16px;		
-			}
+	.price-headers {
+		display: none;
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 16px;
+			padding-top: 11px;
+			padding-right: 350px;
+			color: $charcoal;	
+			font-size: 14px;
+			line-height: 16px;		
+		}
+		&>p:first-child {
+			min-width: 372px;
+		}	
+		&>p:nth-child(2) {
+			min-width: 96px;
+		}	
+		@media (min-width: 1440px) {
+			padding-left: 22px;
 			&>p:first-child {
-				min-width: 372px;
+				min-width: 472px;
 			}	
 			&>p:nth-child(2) {
-				min-width: 96px;
-			}	
-			@media (min-width: 1440px) {
-				padding-left: 22px;
-				&>p:first-child {
-					min-width: 472px;
-				}	
-				&>p:nth-child(2) {
-					min-width: 226px;
-				}
-			}	
-		}
-
+				min-width: 226px;
+			}
+		}	
+	}
 	&__description { 
 		padding: 16px;
 		padding-top: 12px;

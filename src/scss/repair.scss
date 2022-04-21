@@ -1,6 +1,13 @@
 .repair {
     background-color: $soft-gray;
-
+    &__title-brand {
+        font-weight: 100;
+        font-size: 16px;
+    }
+    &__title-technic {
+        font-weight: 100;
+        font-size: 16px;
+    }
     .swiper {
         overflow-y: hidden;
     }

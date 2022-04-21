@@ -1,0 +1,85 @@
+.about {
+    display: grid;
+    grid-row-gap: 16px;
+    @media (min-width: 768px) {
+        display: flex;
+        min-height: 207px;
+        justify-content: space-between;
+    }
+    @media (min-width: 1440px) {
+        padding-right: 40px;
+    }
+	&__description { 
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        overflow: hidden;
+        max-height: 90px;
+        padding: 0 16px;
+        @media (min-width: 768px) {
+            max-height: 162px;
+            padding-left: 24px;
+            line-height: 20px;
+        }
+        @media (min-width: 1440px) {
+            padding-top: 10px;
+            max-height: 175px;
+        }
+    }
+    &__spoiler-wrapper {
+        position: relative;
+        @media (min-width: 768px) {
+            width: 46%;
+            min-height: 200px;
+            justify-content: flex-end;
+        }
+        @media (min-width: 1440px) {
+            width: 50%;
+        }
+    }
+    &__spoiler {
+        margin-left: 30px !important;
+        padding-top: 20px;
+        @media (min-width: 768px) {
+            padding-top: 10px;
+            margin-left: 40px !important;
+        }
+    }
+    #about__spoiler-checker {
+        display: none;
+    }
+
+    #about__spoiler-checker:checked + [for=about__spoiler-checker] {
+        &::before {
+            transform: rotate(225deg);
+            bottom: 2px;
+        }
+        &::after {
+            transform: rotate(225deg);
+            bottom: 7px;
+        }
+    }
+
+    #about__spoiler-checker:checked + [for=about__spoiler-checker] + .about__description {
+        max-height: fit-content;
+    }
+
+	&__img { 
+        background-position: center;
+        background-image: url(../assets/img/cps.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 176px;
+        @media (min-width: 768px) {
+            background-image: url(../assets/img/cps768.png);
+            width: 50%;
+            border-radius: 6px;
+        }
+        @media (min-width: 1440px) {
+            background-image: url(../assets/img/cps1440.png);
+            height: 307px;
+            // width: 532px;
+        }
+    }
+}

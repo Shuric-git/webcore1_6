@@ -1,0 +1,44 @@
+$white: #fff;
+$light-gray: #EAEAEA;
+$soft-gray: #F8F8F8;
+$middle-soft-gray: #DDDDDD; //Буллиты свайпера
+$gray: #cacaca;
+$soft-dark-gray: #B5B6BC; //Активный буллит свайпера
+$charcoal: #7E7E82;
+$table-background: #6d6d6d;
+$dark-input: #414141;
+$dark: #212529;
+$dark-gray: #222222;
+$black: #000;
+$orange-btn: #ff9900;
+$error-red: #ff0000;
+$cherry: #FF3E79;
+$error-red-prehover: #ff7a7a;
+$green-confirm: #009e1a;
+$link-color: #0d6efd;
+$link-color--hover: #003f9c;
+$turquoise-deep: #41F6D7;
+$turquoise-strong: #B8FFEC;
+$turquoise: #D9FFF5;
+
+
+$background: #F8F8F8;
+$footer-background: #1B1C21;
+$main-text-color: #1B1C21;
+$menu-text-color: #7E7E82 ;
+$border-color: #B8FFEC;
+$background-table-color: #616161; /* Цвет таблицы */
+$border-color: #b2dfdb; /* Цвет граней */
+$th-color: #fbc02d; /* Цвет элементов заголовка */
+
+$transition: all .3s ease-in-out;
+
+@mixin titlePrefix($top, $left) {
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    height: 39px;
+    border-left: 3px solid #41F6D7;
+    border-radius: 5px;
+}

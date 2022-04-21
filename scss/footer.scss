@@ -1,0 +1,36 @@
+.footer { 
+    display: grid;
+	grid-row-gap: 16px;
+    grid-template-columns: 2fr;
+    padding: 40px 0;
+    font-size: 14px;
+    line-height: 16px;
+    border-top: solid 1px $turquoise;
+    color: $charcoal;
+    opacity: 0.72;
+    text-align: center;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 38px 24px;
+        &>p:first-child{
+            text-align: left;
+            width: 100%;
+        }
+        &>p:nth-child(2){
+            width: 100%;
+        }
+        &>p:last-child{
+            text-align: right;
+            width: 100%;
+        }
+    }
+    @media (min-width: 1440px) {
+        grid-column: 2;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 31px 21px;
+        width: 100%;
+    }
+}

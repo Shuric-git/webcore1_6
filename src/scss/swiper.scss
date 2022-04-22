@@ -37,15 +37,7 @@
         &:active {
             outline: 1px solid $cherry;
         }
-        @media (min-width: 1440px) {
-            cursor: default;
-            &:hover {
-                filter: none;
-            }
-            &:active {
-                outline: none;
-            }
-        }
+
     }
     .swiper-slide > img {
         object-fit: contain;

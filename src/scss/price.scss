@@ -32,6 +32,13 @@
 			align-items: center;
 			min-height: 0px;
 			padding-left: 16px;
+			cursor: default;
+			&:hover {
+				filter: none;
+			}
+			&:active {
+				outline: none;
+			}
 			&:not(:last-child)::after {
 				content: '';
 				position: absolute;
@@ -99,30 +106,36 @@
 	}
 	.price-headers {
 		display: none;
+		&>button {
+			opacity: 0;
+		}
 		@media (min-width: 768px) {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
 			padding: 16px;
 			padding-top: 11px;
-			padding-right: 350px;
+			padding-right: 16px;
 			color: $charcoal;	
 			font-size: 14px;
 			line-height: 16px;		
 		}
+		@media (min-width: 1440px) {
+			padding-right: 46px;
+		}
 		&>p:first-child {
-			min-width: 372px;
+			min-width: 305px;
 		}	
 		&>p:nth-child(2) {
-			min-width: 96px;
+			min-width: 30px;
 		}	
 		@media (min-width: 1440px) {
 			padding-left: 22px;
 			&>p:first-child {
-				min-width: 472px;
+				min-width: 310px;
 			}	
 			&>p:nth-child(2) {
-				min-width: 226px;
+				min-width: 72px;
 			}
 		}	
 	}
@@ -147,6 +160,7 @@
 		font-size: 16px;
 		line-height: 24px;
 		font-weight: 600;
+		cursor: pointer;
 		@media (min-width: 768px) {
 			padding: 16px 24px;
 		}

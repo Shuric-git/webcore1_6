@@ -99,7 +99,7 @@ body {
 .icon {
     background-size: contain;
     width: 40px;
-    height: 40px;
+    min-height: 40px;
     margin: 8px;
     background-color: $cherry;
     border-radius: 25px;

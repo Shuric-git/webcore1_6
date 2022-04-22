@@ -30,7 +30,6 @@ sliders.forEach((el) => {
       el.dataset.mobile = 'false';
   
       if (el.classList.contains('swiper-initialized')) {
-        console.log(mySlider)
         mySlider.destroy();
       }
     }

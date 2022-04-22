@@ -42,6 +42,9 @@
         &::-webkit-scrollbar {
             display: none;
         }
+        @media (min-width: 1090px) {
+            flex-wrap: wrap;
+        }
         @media (min-width: 1440px) {
             flex-wrap: wrap;
             padding-bottom: 10px;
@@ -54,6 +57,9 @@
         border: 2px solid $soft-gray;
         border-radius: 6px;
         cursor: pointer;
+        &:last-child {
+            margin-right: 50%;
+        }
         @media (min-width: 768px) {
             padding: 8px 19px 8px 16px;
             line-height: 20px;

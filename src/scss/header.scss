@@ -137,6 +137,7 @@
     }
     &__search {
         background-image: url(../assets/img/search.svg);
+        height: 40px;
         margin-right: 16px;
     }
     &__nav {    
@@ -263,9 +264,11 @@
         }
         &__message { 
             background-image: url(../assets/img/chat.svg);
+            height: 40px;
         }
         &__profile { 
             background-image: url(../assets/img/profile.svg);
+            height: 40px;
         }
     }
 }
